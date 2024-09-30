@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>e9-9.00.2401.01</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>test</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <ecology-version>9.00.2401.01</ecology-version>
+
+        <!--WEB-INF-->
+        <!--泛微依赖版本号-->
+        <saas-integratesdk-version>1.0-SNAPSHOT</saas-integratesdk-version>
+        <RSA-version>1.0-SNAPSHOT</RSA-version>
+        <WeaverBoot-E9-version>0.1.1</WeaverBoot-E9-version>
+
+        <!--其他依赖版本号-->
+        <slf4j-api-version>1.7.7</slf4j-api-version>
+        <slf4j-log4j12-version>1.7.6</slf4j-log4j12-version>
+        <okhttp-version>3.3.0</okhttp-version>
+        <fastjson-version>1.2.76</fastjson-version>
+        <gson-version>2.8.0</gson-version>
+        <javaee-16-version>4.0.66</javaee-16-version>
+        <nacos-api-version>1.1.4</nacos-api-version>
+        <nacos-client-version>1.1.4</nacos-client-version>
+        <lombok-version>1.18.12</lombok-version>
+        <jersey-bundle-version>1.19.1</jersey-bundle-version>
+        <rt-version>1.19.1</rt-version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.weaver</groupId>
+            <artifactId>ecology</artifactId>
+            <version>${ecology-version}</version>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--WEB-INF-->
+
+            <!--泛微自己的依赖 （此部分需要自己使用mvn安装泛微的依赖）-->
+            <dependency>
+                <groupId>com.weaver.frame</groupId>
+                <artifactId>WeaverBoot-E9</artifactId>
+                <version>${WeaverBoot-E9-version}</version>
+            </dependency>
+            <!--            <dependency>-->
+            <!--                <groupId>com.weaver.rpa.sdk</groupId>-->
+            <!--                <artifactId>saas-integratesdk</artifactId>-->
+            <!--                <version>${saas-integratesdk-version}</version>-->
+            <!--            </dependency>-->
+            <!-- rpa-sso-sdk -->
+            <dependency>
+                <groupId>com.weaver.rpa</groupId>
+                <artifactId>RSA</artifactId>
+                <version>${RSA-version}</version>
+            </dependency>
+
+
+
+            <!-- 其他依赖 -->
+
+<!--            <dependency>-->
+<!--                <groupId>com.sun.xml.ws</groupId>-->
+<!--                <artifactId>rt</artifactId>-->
+<!--                <version>4.0.3</version>-->
+<!--            </dependency>-->
+            <dependency>
+                <groupId>com.sun.jersey</groupId>
+                <artifactId>jersey-bundle</artifactId>
+                <version>${jersey-bundle-version}</version>
+            </dependency>
+            <!--slf4j-api-1.4.2.jar-->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j-api-version}</version>
+            </dependency>
+
+            <!--slf4j-log4j12-1.4.2.jar-->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j-log4j12-version}</version>
+            </dependency>
+
+            <!--okhttp-3.3.0-->
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-api</artifactId>
+                <version>${nacos-api-version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.nacos</groupId>
+                <artifactId>nacos-client</artifactId>
+                <version>${nacos-client-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok-version}</version>
+            </dependency>
+
+            <!-- Resin -->
+            <dependency>
+                <groupId>com.caucho</groupId>
+                <artifactId>javaee-16</artifactId>
+                <version>${javaee-16-version}</version>
+            </dependency>
+
+
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>

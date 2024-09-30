@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="_testnaruto">
+    <output-path>//wsl.localhost/Ubuntu-22.04/home/kurama/WEAVER/ecology-9/ecology/WEB-INF/lib</output-path>
+    <root id="archive" name="_testnaruto.jar">
+      <element id="module-output" name="test" />
+    </root>
+  </artifact>
+</component>

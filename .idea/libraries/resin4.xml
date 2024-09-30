@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="resin4">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../environment/libs/e9/resin4" />
+      <root url="file://$PROJECT_DIR$/../environment/libs/e9/WEB-INF" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../environment/libs/e9/WEB-INF" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../environment/libs/e9/resin4" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../environment/libs/e9/WEB-INF" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/../environment/libs/e9/WEB-INF" recursive="false" type="SOURCES" />
+  </library>
+</component>
