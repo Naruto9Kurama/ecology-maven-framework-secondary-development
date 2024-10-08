@@ -1,3 +1,5 @@
+# 本地导入方式（使用systemPath）
+
 # 将class文件打包成jar包
 ```bash
 # 进入ecology/classbean目录
