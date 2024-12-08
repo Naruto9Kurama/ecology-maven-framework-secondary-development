@@ -638,6 +638,17 @@ def open_ports(ports):
                 print(('Opening the port: %s' % p))
                 os.system("ufw allow %s/tcp" % p)
             os.system("ufw reload")
+	 # 判断是否为 Debian 系统
+    elif 'debian' in os_info:
+        (status, output) = subprocess.getstatusoutput('ufw status')
+        if 'inactive' in output:
+            print('Firewall is not running! You do not need to operate the above ports!')
+        else:
+            print('Firewall running...')
+            for p in ports:
+                print(('Opening the port: %s' % p))
+                os.system("ufw allow %s/tcp" % p)
+            os.system("ufw reload")
     else:
         # 继续判断是否为 CentOS 系统
         os_version = re.sub("\D", "", os.popen("cat /etc/redhat-release").read())[:1]
